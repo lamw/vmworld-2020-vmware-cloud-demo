@@ -1,0 +1,43 @@
+[vcenterConfig]
+url = https://172.17.31.150/rest
+user = administrator@vsphere.local
+password = VMware1!
+
+[hcxConfig]
+url = https://172.17.31.154/hybridity/api
+user = administrator@vsphere.local
+password = VMware1!
+
+[migrationConfig]
+mobilityGroupName = VMC
+tagId = urn:vmomi:InventoryServiceTag:46c8e884-9565-40fc-bb82-83230fc81337:GLOBAL
+migrationType = RAV
+
+srcEndpointId = 20200903192140236-afcc4e3c-9b87-479d-85f2-30a3ddd1e370
+srcComputeResourceId = f58e483b-4b68-410a-af0d-8ad9586ca534
+srcEndpointName = hcx.vmware.corp
+srcRscName = vcsa.vmware.corp
+srcResourceId = f58e483b-4b68-410a-af0d-8ad9586ca534
+
+dstEndpointId = 20200518144251842-759b08e7-1c32-40f4-a1de-84e2354b284f
+dstComputeResourceId = cdc178ef-0b10-41e0-8d85-5bc189ed3830
+dstEndpointName = HCX Cloud - SDDC-1
+dstRscName = vcenter.sddc-44-230-251-171.vmwarevmc.com
+dstResourceId = cdc178ef-0b10-41e0-8d85-5bc189ed3830
+
+srcNetworkName = HOL
+srcNetworkValue = dvportgroup-18
+srcNetworkType = DistributedVirtualPortgroup
+dstNetworkName = L2E_HOL-10-f58e483b
+dstNetworkValue = /infra/tier-1s/cgw/segments/L2E_HOL-10-f58e483b
+dstNetworkType =  NsxtSegment
+
+placementRpId = resgroup-44
+placementRpName = Compute-ResourcePool
+placementDcId = datacenter-3
+placementDcName = SDDC-Datacenter
+placementFolderId = group-v41
+placementFolderName = Workloads
+placementStorageId = datastore-45
+placementStorageName = WorkloadDatastore
+

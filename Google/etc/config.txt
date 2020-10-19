@@ -1,0 +1,43 @@
+[vcenterConfig]
+url = https://vcsa.vmware.corp/rest
+user = administrator@vsphere.local
+password = VMware1!
+
+[hcxConfig]
+url = https://hcx.vmware.corp/hybridity/api
+user = administrator@vsphere.local
+password = VMware1!
+
+[migrationConfig]
+mobilityGroupName = GCVE
+tagId = urn:vmomi:InventoryServiceTag:f472ddcf-6f10-4373-b84d-875da2577152:GLOBAL
+migrationType = RAV
+
+srcEndpointId = 20200820180337895-8b86fde3-9087-48d1-8f4d-d6b6de231b40
+srcComputeResourceId = 860700d0-07c3-4e40-806a-e32d3cb08825
+srcEndpointName = hcx.vmware.corp
+srcRscName = vcsa.vmware.corp
+srcResourceId = 860700d0-07c3-4e40-806a-e32d3cb08825
+
+dstEndpointId = 20200819161024664-8b7f02d9-f027-45e1-acaa-6d9c2fe9797f
+dstComputeResourceId = 52b4f44f-40b3-41dc-8958-4b630410d1bc
+dstEndpointName = hcx-3970.cbcdf810.us-west2.gve.goog-cloud
+dstRscName = vcsa-3471.cbcdf810.us-west2.gve.goog
+dstResourceId = 52b4f44f-40b3-41dc-8958-4b630410d1bc
+
+srcNetworkName = HOL
+srcNetworkValue = dvportgroup-520
+srcNetworkType = DistributedVirtualPortgroup
+dstNetworkName = L2E_HOL-20-860700d0
+dstNetworkValue = network-o109
+dstNetworkType =  OpaqueNetwork
+
+placementRpId = resgroup-813
+placementRpName = Migrated
+placementDcId = datacenter-21
+placementDcName = Datacenter
+placementFolderId = group-v46
+placementFolderName = Workload VMs
+placementStorageId = datastore-30
+placementStorageName = vsanDatastore
+

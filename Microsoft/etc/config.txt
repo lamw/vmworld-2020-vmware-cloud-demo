@@ -1,0 +1,43 @@
+[vcenterConfig]
+url = https://vcsa.vmware.corp/rest
+user = administrator@vsphere.local
+password = VMware1!
+
+[hcxConfig]
+url = https://hcx.vmware.corp/hybridity/api
+user = administrator@vsphere.local
+password = VMware1!
+
+[migrationConfig]
+mobilityGroupName = AVS
+tagId = urn:vmomi:InventoryServiceTag:5281ac35-25e8-43ee-bafb-8ebc0a473dbf:GLOBAL
+migrationType = RAV
+
+srcEndpointId = 20200831031733253-c8820a25-1d4d-4494-a5f3-a3f150a9d6e6
+srcComputeResourceId = 00707194-e1d1-4674-85c4-bc45ec532e84
+srcEndpointName = hcx
+srcRscName = vcsa.vmware.corp
+srcResourceId = 00707194-e1d1-4674-85c4-bc45ec532e84
+
+dstEndpointId = 20200827234826438-b8c90ecb-ec02-49a7-809f-1d9b4b6f8228
+dstComputeResourceId = 7f531e2d-13f6-4ba7-a18b-b3be10ad7089
+dstEndpointName = TNT43-HCX-MGR-cloud
+dstRscName = 192.168.8.2
+dstResourceId = 7f531e2d-13f6-4ba7-a18b-b3be10ad7089
+
+srcNetworkName = workloads-pg
+srcNetworkValue = dvportgroup-83
+srcNetworkType = DistributedVirtualPortgroup
+dstNetworkName = L2E_workloads-pg-10-00707194
+dstNetworkValue = /infra/tier-1s/TNT43-T1/segments/L2E_workloads-pg-10-00707194
+dstNetworkType =  NsxtSegment
+
+placementRpId = resgroup-445
+placementRpName = Workload-ResourcePool
+placementDcId = datacenter-2
+placementDcName = SDDC-Datacenter
+placementFolderId = group-v52
+placementFolderName = Workloads
+placementStorageId = datastore-11
+placementStorageName = vsanDatastore
+
